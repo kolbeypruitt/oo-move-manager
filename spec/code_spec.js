@@ -65,5 +65,7 @@ describe("moveManager", function() {
     manager.insert(0,0)
     expect(function() {manager.movePlayer(0,0,'left')}).toThrow(new Error("Invalid Move"));
     expect(function() {manager.movePlayer(0,0,'up')}).toThrow(new Error("Invalid Move"));
+    expect(function() {manager.movePlayer(2,2,'down')}).toThrow(new Error("Invalid Move"));
+    expect(function() {manager.movePlayer(2,2,'right')}).toThrow(new Error("Invalid Move"));
   })
 });
